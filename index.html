@@ -10,48 +10,53 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="slider swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-color: red; height: 50px;"></div>
-                <div class="swiper-slide" style="background-image: url('login-img.png');"></div>
-                <div class="swiper-slide" style="background-image: url('login-img1.png');"></div>
-                <div class="swiper-slide" style="background-image: url('login-img.png');"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
+    <div class="container-fluid">
 
-        <div class="login-form">
-            <div class="logo-container">
-                <img src="logon.png" alt="logo" class="logo">
+        <div class="background-container"></div> <!-- Background image container with opacity -->
+    
+        <div class="container">
+            <div class="slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('login-img.png');"></div>
+                    <div class="swiper-slide" style="background-image: url('login-img1.png');"></div>
+                    <div class="swiper-slide" style="background-image: url('slider.png');"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <h2>Login</h2>
-            <form>
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+    
+            <div class="login-form">
+                <div class="logo-container">
+                    <img src="logon.png" alt="logo" class="logo">
                 </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="input-group captcha-group">
-                    <label for="captcha">Captcha</label>
-                    <div class="captcha-container">
-                        <img src="logon.png" alt="captcha" class="captcha-image">
-                        <input type="text" id="captcha" name="captcha" required placeholder="Enter Captcha">
+                <h2>Login</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
                     </div>
-                </div>
-                <button type="submit">Login</button>
-            </form>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-group captcha-group">
+                        <label for="captcha">Captcha</label>
+                        <div class="captcha-container">
+                            <img src="logon.png" alt="captcha" class="captcha-image">
+                            <input type="text" id="captcha" name="captcha" required placeholder="Enter Captcha">
+                        </div>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
         </div>
     </div>
+
   
     <script>
         const swiper = new Swiper('.swiper', {
           loop: true,
           autoplay: {
-            delay: 28000,
+            delay: 8000,
             disableOnInteraction: false,
           },
           pagination: {

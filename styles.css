@@ -1,4 +1,9 @@
-body {
+body{
+    margin: 0;
+}
+
+
+.container-fluid {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -6,6 +11,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('bg-pic.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 1;
 }
 
 .container {
@@ -16,6 +34,8 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    background-color: #fff;
 }
 
 .slider {
@@ -41,7 +61,7 @@ body {
 
 .logo-container {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -104,16 +124,25 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+    .container-fluid {
+        overflow: hidden;
+    }
     .container {
         flex-direction: column;
+        width: 80%;
         height: auto;
     }
 
-    .slider, .login-form {
+    .slider,
+    .login-form {
         width: 100%;
     }
 
     .login-form {
         padding: 20px;
+    }
+
+    .background-container {
+        background: url('bg2.png') no-repeat center center;
     }
 }
